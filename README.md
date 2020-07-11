@@ -7,8 +7,9 @@ Degraded document image  binarization is one of most challenging tasks in the do
 ### Architecture
 ![Architecture](figures/Architecture.jpg)
 
-### Results
+### Quantative Results
 ![](figures/train.jpg)
+![](figures/test.jpg)
 
 
 
