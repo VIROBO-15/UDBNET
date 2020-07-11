@@ -266,6 +266,48 @@ class Model(nn.Module):
     def Un_freeze_network(self, model):
         for param in model.parameters():
             param.requires_grad = True
+            
+            
+        def test_base(self, test_data):
+
+        i=0
+        for i_batch, (clean_img, degraded_img) in enumerate(test_data):
+            clean_img = clean_img.to(device)
+            degraded_img = degraded_img.to(device)
+            clean_bin_img = self.Binarization_generator(degraded_img)
+            if not os.path.exists('./predicted_images_base_model/'):
+                os.makedirs('./predicted_images_base_model/')
+                
+            torchvision.utils.save_image(clean_img, './predicted_images_base_model/Clean_img{}.jpg'.format(i),
+                                         normalize=True, nrow=4)
+            torchvision.utils.save_image(degraded_img, './predicted_images_base_model/Degraded_img{}.jpg'.format(i),
+                                         normalize=True, nrow=4)
+            torchvision.utils.save_image(clean_bin_img, './predicted_images_base_model/Binarized_img{}.jpg'.format(i),
+                                         normalize=True, nrow=4)
+            i += 1
+
+
+    def test_ours(self, test_data):
+
+        i = 0
+        for i_batch, (clean_img, degraded_img) in enumerate(test_data):
+            clean_img = clean_img.to(device)
+            degraded_img = degraded_img.to(device)
+            clean_bin_img = self.Binarization_generator(degraded_img)
+            if not os.path.exists('./predicted_images_ours/'):
+                os.makedirs('./predicted_images_ours/')
+
+            torchvision.utils.save_image(clean_img, './predicted_images_ours/Clean_img{}.jpg'.format(i),
+                                         normalize=True, nrow=4)
+            torchvision.utils.save_image(degraded_img, './predicted_images_ours/Degraded_img{}.jpg'.format(i),
+                                         normalize=True, nrow=4)
+            torchvision.utils.save_image(clean_bin_img, './predicted_images_ours/Binarized_img{}.jpg'.format(i),
+                                         normalize=True, nrow=4)
+
+            i += 1
+
+
+
 
 
 
