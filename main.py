@@ -52,7 +52,7 @@ if __name__ == "__main__":
     
          torch.save(model.state_dict(), './model/checkpoint_texture_epoch_{}.pth'.format(epochs))
 
-    model.load_state_dict(torch.load('./model/checkpoint_texture_epoch_14.pth'))
+    #model.load_state_dict(torch.load('./model/checkpoint_texture_epoch_14.pth'))
     model.freeze_network(model.Texture_generator)
     model.freeze_network(model.Texture_Discrimator)
 
