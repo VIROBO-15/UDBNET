@@ -1,4 +1,4 @@
-# UDBNET: Unsupervised Document Binarization Network via Adversarial Game [[paper](https://arxiv.org/abs/2004.08141)]
+# UDBNET: Unsupervised Document Binarization Network via Adversarial Game
 Amandeep Kumar*, Shuvozit Ghose*, Pinaki Nath Chowdhury, Partha Pratim Roy, Umapada Pal
 
 ## Abstract
