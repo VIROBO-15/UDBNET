@@ -15,3 +15,13 @@ Degraded document image  binarization is one of most challenging tasks in the do
 ### Quantative Results on Test Set
 ![](figures/test.jpg)
 
+## Citation
+If you find this work useful in your research, please consider citing: 
+```
+@article{kumar2020udbnet,
+  title={UDBNET: Unsupervised Document Binarization Network via Adversarial Game},
+  author={Kumar, Amandeep and Ghose, Shuvozit and Chowdhury, Pinaki Nath and Roy, Partha Pratim and Pal, Umapada},
+  journal={arXiv preprint arXiv:2007.07075},
+  year={2020}
+}
+```
